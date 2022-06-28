@@ -1,5 +1,5 @@
 server:
   RpidAPIKey: YOUR_VALUE
   RapidAPIHost: YOUR_VALUE
-  port: PORT VALUE (Ex: :8080)
+  port: PORT VALUE (Ex: 8080)
   weatherUrl: https://weatherapi-com.p.rapidapi.com/forecast.json
