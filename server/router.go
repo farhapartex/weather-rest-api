@@ -8,16 +8,19 @@ import (
 )
 
 func NewRouter() *gin.Engine {
+	// Initialize the router
 	router := gin.New()
 	router.Use(gin.Logger())
 	router.Use(gin.Recovery())
 
+	// Check system health
 	router.GET("/health", func(c *gin.Context) {
 		c.JSON(200, gin.H{
 			"message": "I'm healthy",
 		})
 	})
 
+	// API endpoints
 	api := router.Group("api")
 	{
 		v1 := api.Group("v1")

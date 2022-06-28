@@ -6,8 +6,8 @@ Tech stack: Golang, GIN (Framework), RapidAPI
 
 * Clone this repo
 * Install all dependency by this command: go get
-* Create a .env file and copy everything from .sample.env. Put proper information in .env file
-* Run the server by go run main.go
+* In the config folder, create a file named with `development.yml` and copy everything from `test.yaml`. Put proper information in `development.yml` file
+* Run the server by `go run main.go`
 
 
 #### Some basic installation process:
