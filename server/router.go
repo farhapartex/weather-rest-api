@@ -9,7 +9,7 @@ import (
 
 func NewRouter() *gin.Engine {
 	// Initialize the router
-	router := gin.New()
+	router := gin.Default()
 	router.Use(gin.Logger())
 	router.Use(gin.Recovery())
 
@@ -30,6 +30,7 @@ func NewRouter() *gin.Engine {
 				weather.GET("/", func(ctx *gin.Context) {
 					query := ctx.DefaultQuery("query", "empty")
 					days := ctx.DefaultQuery("days", "1")
+					dt := ctx.DefaultQuery("dt", "empty")
 
 					if query == "empty" {
 						ctx.JSON(400, gin.H{
@@ -39,7 +40,7 @@ func NewRouter() *gin.Engine {
 					}
 
 					numberOfDays, _ := strconv.Atoi(days)
-					status, data := controller.WeatherData(query, numberOfDays)
+					status, data := controller.WeatherData(query, numberOfDays, dt)
 					ctx.Data(status, "application/json", data)
 				})
 			}
