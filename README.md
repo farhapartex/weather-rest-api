@@ -9,7 +9,7 @@ Tech stack: Golang, GIN (Framework), RapidAPI
 * In the config folder, create a file named with `development.yml` and copy everything from `test.yaml`. Put proper information in `development.yml` file
 * Run the server by `go run main.go`
 
-### API
+### API Preview
 
 
 * http://localhost:8080/health/ (To check system health)
@@ -31,6 +31,9 @@ Tech stack: Golang, GIN (Framework), RapidAPI
 * For response demo check `response.json` file
 
 
+### Run unit-tests
+
+Use this command: `go test tests/weather_test.go`
 
 #### Some basic installation process:
 
