@@ -1,0 +1,4 @@
+server:
+  RpidAPIKey: YOUR_VALUE
+  RapidAPIHost: YOUR_VALUE
+  port: PORT VALUE (Ex: :8080)
